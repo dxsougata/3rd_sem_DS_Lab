@@ -1,1 +1,1 @@
-# 3rd_sem_DS_Lab: all programs are avilable
+# 3rd_sem_DS_Lab programs

@@ -2,7 +2,7 @@
 i.   Find the no.of nonzero elements
 ii.  Display upper triangular matrix
 iii. Display the elements of just above and below the main diagonal*/
-
+#include<stdio.h>
 int find_nonzero(int arr[10][10], int n) {
     int count = 0;
     for (int i = 0; i < n; i++) {
@@ -58,4 +58,5 @@ int main() {
     display_diagonal_elements(arr, n);
 
     return 0;
+
 }

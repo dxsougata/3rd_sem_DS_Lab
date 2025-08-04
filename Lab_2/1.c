@@ -49,9 +49,10 @@ int main (){
     int n = sizeof(arr)/sizeof(arr[0]);
     printf( "Your arr elements are : \n");
     for(i=0;i<n;i++){
-        printf("%d",arr[i]);
+        printf("%d  ",arr[i]);
     }
-    printf("\n");
+    b:
+    printf("\n\n");
     printf("Enter 1 for : Insert\n");
     printf("Enter 2 for : Delete\n");
     printf("Enter 3 for : Linear Search\n");
@@ -59,35 +60,35 @@ int main (){
     printf("Enter 5 for : Exit\n");
     scanf("%d",&c);
 
-    b:
+    
     switch(c){
         case 1:
-        printf("Enter the array position : ");
+        printf("\nEnter the array position : ");
         scanf("%d",&pos);
-        printf("Enter the element you want to push : ");
+        printf("\nEnter the element you want to push : ");
         scanf("%d",&ele);
         insert(arr,&n,pos,ele );
-        printf( "Your arr elements are : \n");
+        printf( "\nYour arr elements are : \n");
         for(i=0;i<n;i++){
         printf("%d  ",arr[i]);
     }
         break;
 
         case 2:
-        printf("Enter the position of array you want to delete : ");
+        printf("\nEnter the position of array you want to delete : ");
         scanf("%d",&pos);
         delete(arr,&n,pos);
-        printf( "Your arr elements are : \n");
+        printf( "\nYour arr elements are : \n");
         for(i=0;i<n;i++){
         printf("%d  ",arr[i]);
         }
         break;
 
         case 3:
-        printf("Enter the element you want to search : ");
+        printf("\nEnter the element you want to search : ");
         scanf("%d",&ele);
         linear_search(arr,n,ele);
-         printf( "Your arr elements are : \n");
+         printf( "\nYour arr elements are : \n");
         for(i=0;i<n;i++){
         printf("%d  ",arr[i]);
     }
@@ -97,12 +98,16 @@ int main (){
         traverse(arr,n);
         break;
 
+        case 5 :
+        break;
+
         default:
-        printf("Invalid input");
+        printf("\nInvalid input");
         break;
 
 
-    } goto b;
+    } while(c!=5)
+        {goto b;}
 
    
 }
